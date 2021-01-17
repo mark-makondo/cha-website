@@ -1,0 +1,17 @@
+{
+    "version": 3,
+    "mappings": "AEAA,WAAW;AACX,AAAA,CAAC,CAAA;EACG,UAAU,EAAE,UAAU;EACtB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX;;AACD,AACE,EADA,CACA,EAAE,CAAA;EACA,UAAU,EAAE,IAAI;CACjB;;AAGH,AAEE,IAFE,CAEF,GAAG,CAAA;EACD,SAAS,EAAE,IAAI;EACf,OAAO,EAAE,KAAK;CACf",
+    "sources": [
+        "../../scss/style.scss",
+        "../../scss/_reusable.scss",
+        "../../scss/_init.scss",
+        "../../scss/_navbar.scss",
+        "../../scss/_header.scss",
+        "../../scss/_about.scss",
+        "../../scss/_works.scss",
+        "../../scss/_footer.scss",
+        "../../scss/_responsive.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
