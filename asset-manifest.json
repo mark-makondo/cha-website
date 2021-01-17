@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/cha-website/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/cha-website/static/js/main.f71d8b10.chunk.js",
+    "main.js.map": "/cha-website/static/js/main.f71d8b10.chunk.js.map",
+    "runtime-main.js": "/cha-website/static/js/runtime-main.ad28e07f.js",
+    "runtime-main.js.map": "/cha-website/static/js/runtime-main.ad28e07f.js.map",
+    "static/js/2.2722cdb2.chunk.js": "/cha-website/static/js/2.2722cdb2.chunk.js",
+    "static/js/2.2722cdb2.chunk.js.map": "/cha-website/static/js/2.2722cdb2.chunk.js.map",
+    "static/js/3.975e61cf.chunk.js": "/cha-website/static/js/3.975e61cf.chunk.js",
+    "static/js/3.975e61cf.chunk.js.map": "/cha-website/static/js/3.975e61cf.chunk.js.map",
+    "index.html": "/cha-website/index.html",
+    "static/css/main.ab7136cd.chunk.css.map": "/cha-website/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.2722cdb2.chunk.js.LICENSE.txt": "/cha-website/static/js/2.2722cdb2.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/cha-website/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ad28e07f.js",
+    "static/js/2.2722cdb2.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.f71d8b10.chunk.js"
+  ]
+}
