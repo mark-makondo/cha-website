@@ -1,18 +1,103 @@
 
+$max-width: (
+  "m-width-s": 20rem,
+);
+
+$font-colors: (
+  "primary" : #EC625F,
+  "active": #FBEBEB,
+  "not-active": #888484,
+  "default": #110101
+);
+
+$bg-colors: (
+  "primary": #110101,
+  "secondary": #FBEBEB,
+  "light-red-tr": #2E242480,
+  "dark-pink":#E2D6D6
+);
+
+$font-size: (
+  // s-screen
+  "h1-s": 60px,
+  "h2-s": 30px,
+  "n-span-s": 20px,
+  "f-span-s": 15px,
+  // m-screen
+  "h1-m": 80px,
+  "h2-m": 60px,
+  "n-span-m": 30px,
+  "f-span-m": 20px,
+  // l-screen
+  "h1-l": 100px,
+  "h2-l": 70px,
+  "n-span-l": 35px,
+  "f-span-l": 25px,
+  // xl-screen
+  "h1-xl": 130px,
+  "h2-xl": 100px,
+  "n-span-xl": 50px,
+  "f-span-xl": 40px
+);
+
+@function getMaxWidth($target){
+  @return map-get($max-width, $target);
+}
+@function getColor($target){
+  @return map-get($font-colors, $target );
+}
+@function getBgColor($target){
+  @return map-get($bg-colors, $target);
+}
+@function getFontSize($target){
+  @return map-get($font-size, $target);
+}
+
+@mixin setFontSize($h1, $h2, $nspan, $fspan){
+  h1{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    color: getColor(primary);
+    font-size: getFontSize($h1);
+  }
+  h2{
+    font-size: getFontSize($h2);
+  }
+  .n-span{
+    font-size: getFontSize($nspan);
+  }
+  .f-span{
+    font-size: getFontSize($fspan);
+  }
+}
+
+@mixin setDisplayFlex($direction, $justAlign, $align){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justAlign;
+  align-content: $align;
+}
+
 // responsive css
 @mixin media-md{
-    @media screen and (min-width: 768px){
-      @content;
-    }
-  };
+  @media screen and (min-width: 768px){
+
+    @include setFontSize(h1-m, h2-m, n-span-m, f-span-m);
+    @content;
+  }
+};
   
-  @mixin media-lg{
-    @media screen and (min-width: 1200px){
-      @content;
-    }
-  };
-  @mixin media-xl{
-    @media screen and (min-width: 1600px){
-      @content;
-    }
-  };
+@mixin media-lg{
+  @media screen and (min-width: 1200px){
+
+    @include setFontSize(h1-l, h2-l, n-span-l, f-span-l);
+    @content;
+  }
+};
+@mixin media-xl{
+  @media screen and (min-width: 1600px){
+
+    @include setFontSize(h1-xl, h2-xl, n-span-xl, f-span-xl);
+    @content;
+  }
+};

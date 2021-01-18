@@ -1,0 +1,28 @@
+.header{
+    position: relative;
+    height: 100vh;
+
+    #{&}__container{
+        @include setDisplayFlex(column,center,center);
+        
+        max-width: getMaxWidth(m-width-s);
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    #{&}__logo{
+        margin-bottom: 1.5rem;
+    }
+
+    #{&}__info{
+        text-align: center;
+        color: getColor(not-active);
+        font-style: italic;
+        
+        span{
+            color: getColor(primary);
+        
+        }
+    }
+
+}
