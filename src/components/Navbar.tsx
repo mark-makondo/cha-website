@@ -8,7 +8,7 @@ interface Props{
 
 const Navbar: React.FC<Props> = ({}) => {
     return(
-        <div>
+        <div className="navbar">
             {/* This is Nabnar */}
         </div>
     )

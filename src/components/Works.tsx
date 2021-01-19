@@ -1,8 +1,8 @@
 import React from 'react';
 
 // svg components
-import {ReactComponent as WorkLogo} from '../img/svg/works-beauty.svg';
 import {ReactComponent as Lines} from '../img/svg/rect-lines.svg';
+import WorkLogo from '../img/svg/works-beauty.svg';
 
 
 // jpg components
@@ -17,7 +17,7 @@ interface Props{
 }
 
 
-const works__li = (target:string) =>{
+const worksList = (target:string) =>{
     return(
         <li>
             <span className="n-span">{target}</span> 
@@ -26,25 +26,30 @@ const works__li = (target:string) =>{
     )
 }
 
+  
+const svgBackground = {
+    background: `url(${WorkLogo}) no-repeat center`,
+    backgroundSize: 'contain',
+}
+
 
 const Works: React.FC<Props> = () =>{
-    return(
+    return( 
         <section className="works">
             <div className="works__container">
                 <div className="works__list">
-                    <div className="works__list__logo"><WorkLogo/></div>
-                    <div className="works__list__container">
+                    <div className="works__list__container"  style = {svgBackground} >
                         <h2>.Be it.</h2>
                         <ul>
-                            {works__li("Hair")}
-                            {works__li("Eyebrows")}
-                            {works__li("Beauty Care")}
-                            {works__li("Nail Care")}
-                            {works__li("Waxing")}
+                            {worksList("Hair")}
+                            {worksList("Eyebrows")}
+                            {worksList("Beauty Care")}
+                            {worksList("Nail Care")}
+                            {worksList("Waxing")}
                         </ul>
                     </div>
                 </div>
-
+                <h2>.</h2>
                 <div className="works__img-box">
                     <img src={Hair} alt="Sample Hair Work"/>
                 </div>

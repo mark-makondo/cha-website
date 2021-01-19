@@ -1,38 +1,51 @@
 /* reset */
-  *{
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+//font-family: 'Courier Prime', monospace;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier Prime', monospace;
+  font-style: unset;
+}
+
+.f-span,
+.n-span,
+h1,
+h2,
+h3,
+h4,
+h5{
+  cursor: pointer;
+}
+
+body{
+  background-color: getBgColor(primary);
+}
+
+ul{
+  li{
+    list-style: none;
     margin: 0;
     padding: 0;
-    font-family: 'Courier Prime', monospace;
-    font-style: unset;
   }
+}
 
-  body{
-    background-color: getBgColor(primary);
-  }
+a{
+  text-decoration: none;
+  color: unset;
+}
 
-  ul{
-    li{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-  }
+img{
+  max-width: 100%;
+  display: block;
+}
 
-  a{
-    text-decoration: none;
-    color: unset;
-  }
-
-  img{
-    max-width: 100%;
-    display: block;
-  }
-
-  svg{
-    width: 100%;
-    height: 100%;
-  }
+svg{
+  width: 100%;
+  height: 100%;
+}
 
 //set default font size for mobile
 @include setFontSize(h1-s, h2-s, n-span-s, f-span-s);

@@ -2,7 +2,7 @@ import React from 'react'
 
 
 // svg components
-import {ReactComponent as HeroLogo} from '../img/svg/hero-logo.svg';
+import {ReactComponent as HeroLogo} from '../img/svg/hero-logo/hero-logo-colored.svg';
 
 interface Props {
 
@@ -17,7 +17,7 @@ const Header: React.FC<Props> = ({}) => {
                     </div>
 
                 <div className="header__info n-span"> 
-                    "I will bring out the <span>B</span>eauty in you"
+                    "I will bring out the <span>Beauty</span> in you"
                 </div>
             </div>
         </div>

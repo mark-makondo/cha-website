@@ -1,0 +1,58 @@
+.footer{
+    position: relative;
+
+    #{&}__container{
+        @include setDisplayFlex(column,center,center);
+        
+        max-width: getMaxWidth(m-width-s);
+        margin: 0 auto;
+        padding: 4rem 1rem;
+        height: auto;
+        color: getColor(active);
+        text-align: center;
+    }
+    
+    #{&}__logo{
+        width: 100%;
+    }
+
+    #{&}__contacts{
+        margin: 0 auto;
+        ul{
+            margin: 1rem 0;
+            text-align: left;
+
+            li{
+                @include setDisplayFlex(row,center,center);
+                margin-top: .5rem;
+                span{
+                    a{
+                        display: flex;
+                    }
+                }
+
+                span:nth-child(odd){
+                    @include setDisplayFlex(row,center,center);
+                    width: 30%;
+                    font-size: 2rem;
+                    color: getColor(not-active);
+                    transition: color .2s linear;
+
+                    &:hover{
+                        color: getColor(active);
+                    }
+                }
+                
+                 span:nth-child(even){
+                    width: 70%;
+                    color: getColor(not-active);
+                    transition: color .2s linear;
+                    
+                    &:hover{
+                        color: getColor(active);
+                    }
+                }
+           }
+        }
+    }
+}

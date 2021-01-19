@@ -1,6 +1,9 @@
 
 $max-width: (
   "m-width-s": 20rem,
+  "m-width-m": 30rem,
+  "m-width-l": 60rem,
+  "m-width-xl": 85rem
 );
 
 $font-colors: (
@@ -25,7 +28,7 @@ $font-size: (
   "f-span-s": 15px,
   // m-screen
   "h1-m": 80px,
-  "h2-m": 60px,
+  "h2-m": 45px,
   "n-span-m": 30px,
   "f-span-m": 20px,
   // l-screen
@@ -76,6 +79,7 @@ $font-size: (
   flex-direction: $direction;
   justify-content: $justAlign;
   align-content: $align;
+  align-items: $align;
 }
 
 // responsive css

@@ -2,34 +2,37 @@
     position: relative;
     height: 100vh;
     background-color: getBgColor(secondary);
+
     #{&}__container{
         @include setDisplayFlex(column,center,center);
         
         max-width: getMaxWidth(m-width-s);
         margin: 0 auto;
-        height: 100%;
+        padding: 1rem;
+        min-height: 100%;
+        
+        h2{
+            display: none;
+            color: getColor(primary);
+        }
     }
 
     #{&}__list{
         position: relative;
         @include setDisplayFlex(column,center,center);
-        width: 90%;
+        width: 100%;
         margin: auto;
-
-        &__logo{
-            position: absolute;
-            top: 0;
-            z-index: 0;
-            svg{
-                fill: #F3DBDB;
-            }
-        }
 
         &__container{
             position: relative;
             text-align: center;
             z-index: 1;
+            width: 100%;
+            height: auto;
+
             h2{
+                display: unset;
+                color: getColor(default);
                 margin:1.5rem 0;
                 letter-spacing: 2px;
             }
@@ -49,12 +52,15 @@
 
     #{&}__img-box{
         @include setDisplayFlex(column,center,center);
-        width: 90%;
+        width: 100%;
         margin: auto;
         height: auto;
+        border: 1px solid #E2D6D6;
         box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+        
         img{
-            visibility: hidden;
+            padding: 1rem;
+            // visibility: hidden;
         }
     }
 
