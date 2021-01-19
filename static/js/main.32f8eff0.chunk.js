@@ -1,2 +1,0 @@
-(this["webpackJsonpcha-beauty"]=this["webpackJsonpcha-beauty"]||[]).push([[0],{10:function(e,c,t){"use strict";t.r(c);var a=t(0),n=t(1),r=t.n(n),s=t(3),i=t.n(s);t(9);var d=function(){return Object(a.jsx)("div",{className:"App",children:Object(a.jsx)("header",{className:"App-header",children:Object(a.jsx)("a",{children:"Learn React"})})})};i.a.render(Object(a.jsx)(r.a.StrictMode,{children:Object(a.jsx)(d,{})}),document.getElementById("root"))},9:function(e,c,t){}},[[10,1,2]]]);
-//# sourceMappingURL=main.32f8eff0.chunk.js.map
