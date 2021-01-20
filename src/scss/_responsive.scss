@@ -8,10 +8,7 @@
     .about{
         #{&}__image-box{
             max-width: 25rem;
-        }
-        
-        #{&}__title{
-            top: 0rem;
+            height: 60%;
         }
     }
     .works{
@@ -59,22 +56,22 @@
                 bottom: 0;
                 padding-bottom: 1rem;
             }
-        }
-        
-        #{&}__title{
-            display: unset;
-            position: absolute;
-            top: 7rem;
-            left: 0;
+            &__fit{
+                position: relative;
+                @include setDisplayFlex(row,center,center);
+                width: 100%;
+                height: unset;
+            }
         }
         #{&}__half{
-            @include setDisplayFlex(row,flex-end,flex-end);
-            width: 50%;
-            height: 100%;
             position: relative;
+            @include setDisplayFlex(row,flex-start,flex-start);
+            width: 50%;
+            margin-bottom: auto;
         }
         #{&}__image-box{
             @include setDisplayFlex(row,center,center);
+            height: unset;
             position: relative;
             padding: 0;
             width: 50%;
@@ -90,7 +87,7 @@
             bottom: unset;
             padding: unset;
             max-width: 100%;
-
+            margin-top: unset;
             &__container{
                 align-items: flex-start;
                 

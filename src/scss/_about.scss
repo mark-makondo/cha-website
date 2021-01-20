@@ -7,26 +7,31 @@
         position: relative;
         @include setDisplayFlex(column,center,center);
         height: 100%;
-
         h2{
             display: none;
             color: getColor(primary);
         }
+        &__fit{
+            position: relative;
+            @include setDisplayFlex(column,center,center);
+            width: 100%;
+            height: 100%;
+        }
     }
     
     #{&}__title{
-        display: unset;
-        position: absolute;
-        top: 3rem;
-        text-align: center;
         color: getColor(active);
+        text-align: center;
     }
 
     #{&}__half{
-        display: none;
+        position: relative;
+        @include setDisplayFlex(column,center,center);
+        margin-bottom: 3rem;
     }
 
     #{&}__image-box{
+        height: 50%;
         max-width: getMaxWidth(m-width-s);
         padding: .5rem;
         img{
@@ -40,7 +45,7 @@
         letter-spacing: 2px;
         color: getColor(primary);
         background-color: getBgColor(light-red-tr);
-        margin-top: 10rem;
+        margin-top: 15rem;
         padding: 1rem 0;
 
         &__container{
