@@ -1,23 +1,25 @@
 .footer{
     position: relative;
+    padding: 4rem 1rem;
 
     #{&}__container{
         @include setDisplayFlex(column,center,center);
-        
-        max-width: getMaxWidth(m-width-s);
-        margin: 0 auto;
-        padding: 4rem 1rem;
-        height: auto;
+        margin: auto;
         color: getColor(active);
         text-align: center;
+        max-width: getMaxWidth(m-width-s);
     }
     
     #{&}__logo{
         width: 100%;
+        margin-bottom: 2.5rem;
     }
 
     #{&}__contacts{
         margin: 0 auto;
+        .inside{
+            display: none;
+        }
         ul{
             margin: 1rem 0;
             text-align: left;

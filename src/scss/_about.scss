@@ -1,13 +1,10 @@
 .about{
     position: relative;
     height: 100vh;
+    padding: 1rem;
 
     #{&}__container{
         @include setDisplayFlex(column,center,center);
-
-        max-width: getMaxWidth(m-width-s);
-        margin: 0 auto;
-        padding: 1rem;
         height: 100%;
 
         h2{
@@ -21,8 +18,8 @@
     }
 
     #{&}__image-box{
-        margin: auto;
-        width: 90%;
+        max-width: getMaxWidth(m-width-s);
+        padding: .5rem;
         img{
             mix-blend-mode: luminosity;
         }
@@ -34,9 +31,8 @@
         letter-spacing: 2px;
         color: getColor(primary);
         background-color: getBgColor(light-red-tr);
-        max-width:  getMaxWidth(m-width-s);
-        bottom: 12rem;
-        padding: 1.3rem 0;
+        margin-top: 10rem;
+        padding: 1rem 0;
 
         &__container{
             @include setDisplayFlex(column,center,center);

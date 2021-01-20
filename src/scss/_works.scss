@@ -2,26 +2,23 @@
     position: relative;
     height: 100vh;
     background-color: getBgColor(secondary);
-
+    padding: 1rem;
     #{&}__container{
         @include setDisplayFlex(column,center,center);
-        
         max-width: getMaxWidth(m-width-s);
-        margin: 0 auto;
-        padding: 1rem;
-        min-height: 100%;
-        
+        margin: auto;
+        height: 100%;
+
         h2{
             display: none;
             color: getColor(primary);
         }
     }
-
     #{&}__list{
         position: relative;
         @include setDisplayFlex(column,center,center);
         width: 100%;
-        margin: auto;
+        margin-bottom: 1.5rem;
 
         &__container{
             position: relative;
@@ -49,18 +46,13 @@
             }
         }
     }
-
     #{&}__img-box{
         @include setDisplayFlex(column,center,center);
-        width: 100%;
-        margin: auto;
-        height: auto;
         border: 1px solid #E2D6D6;
         box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
         
         img{
             padding: 1rem;
-            // visibility: hidden;
         }
     }
 

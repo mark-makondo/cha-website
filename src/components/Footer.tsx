@@ -10,11 +10,12 @@ interface Props{
 const Footer: React.FC<Props> = ({}) => {
     return(
 
-        <div className="footer">
+        <section className="footer">
             <div className="footer__container">
-                <div className="footer__logo"><Logo/></div>
+                <div className="footer__logo outside"><Logo/></div>
                 <span className="n-span">Check this out for more!</span>
                 <div className="footer__contacts">
+                    <div className="footer__logo inside"><Logo/></div>
                     <ul>
                         <li> 
                             <span><a href="https://www.facebook.com/chaartistbeauty"><i className="fab fa-facebook"></i></a></span>
@@ -28,7 +29,7 @@ const Footer: React.FC<Props> = ({}) => {
                 </div>
                 <span className="f-span">Thank you for visiting my page!</span>
             </div>
-        </div>
+        </section>
     )
 }
 

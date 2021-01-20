@@ -9,7 +9,7 @@ interface Props{
 
 const About: React.FC<Props> = () => {
     return(
-        <div className="about">
+        <section className="about">
             <div className="about__container">
                 <div className="about__half">
                 </div>
@@ -27,7 +27,7 @@ const About: React.FC<Props> = () => {
                  
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

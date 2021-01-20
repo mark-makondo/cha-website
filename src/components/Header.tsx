@@ -10,7 +10,7 @@ interface Props {
 
 const Header: React.FC<Props> = ({}) => {
     return (
-        <div className="header">
+        <section className="header">
             <div className="header__container">
                 <div className="header__logo">
                         <HeroLogo/>
@@ -20,7 +20,7 @@ const Header: React.FC<Props> = ({}) => {
                     "I will bring out the <span>Beauty</span> in you"
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

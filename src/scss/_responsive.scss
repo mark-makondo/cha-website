@@ -6,20 +6,17 @@
         }
     }
     .about{
-        #{&}__container{
+        #{&}__image-box{
             max-width: getMaxWidth(m-width-m);
-        }
-        #{&}__info{
-            max-width:  getMaxWidth(m-width-m);
-            bottom: 6rem;
         }
     }
     .works{
         #{&}__container{
             max-width: getMaxWidth(m-width-m);
         }
+
         #{&}__img-box{
-            width: 70%;
+            max-width: getMaxWidth(m-width-s);
         }
     }
     .footer{
@@ -36,56 +33,47 @@
 @include media-lg{
     .header{
         #{&}__container{
-            @include setDisplayFlex(column,center,center);
-            
             max-width: getMaxWidth(m-width-l);
-            margin: 0 auto;
-            height: 100%;
         }
         #{&}__logo{
             width: 55%;
             margin: auto;
-
         }
         #{&}__info{
-            max-width: 35rem;
+            max-width: 100%;
         }
     }
     .about{
         #{&}__container{
             @include setDisplayFlex(row,center,center);
-
             max-width: getMaxWidth(m-width-l);
             margin: 0 auto;
             height: 100%;
-
             h2{
                 display: unset;
                 position: absolute;
                 bottom: 0;
                 padding-bottom: 1rem;
             }
-    
         }
         #{&}__half{
             @include setDisplayFlex(row,flex-end,flex-end);
-            width: 100%;
+            width: 50%;
             height: 100%;
             position: relative;
         }
-      
         #{&}__image-box{
             @include setDisplayFlex(row,center,center);
-
             position: relative;
-            
+            padding: 0;
+            width: 50%;
+            max-width: 100%;
             img{
                 height: 100%;
                 width: 100%;
             }
         }
         #{&}__info{
-            position: absolute;
             background-color: unset;
             height: auto;
             bottom: unset;
@@ -113,38 +101,78 @@
     .works{
         #{&}__container{
             @include setDisplayFlex(row,center,center);
-            
             max-width: getMaxWidth(m-width-l);
-            margin: 0 auto;
-            padding: 1rem;
-            min-height: 100%;
-
             h2{
                 display: unset;
-                margin-top: auto;
+                position: absolute;
+                bottom: 0;
+                padding-bottom: 1rem;
             }
         }
         #{&}__list{
+            width: 50%;
+            margin-bottom: 0;
             &__container{
                 max-width: getMaxWidth(m-width-l);
-
+                text-align: left;
+                h2{
+                    position: unset;
+                }
                 ul{
                     max-width: 100%;
+                    li{
+                        margin-left: 5rem;
+                    }
                 }
             }
 
         }
         #{&}__img-box{
-            width: 100%;
+            width: 50%;
+            max-width: 100%;
         }
     }
     .footer{
         #{&}__container{
             max-width: getMaxWidth(m-width-l);
+            .n-span{
+                order: 1;
+            }
+            .f-span{
+                order: 4;
+            }
+            .outside{
+                display: none;
+            }
         }
-        #{&}__logo{
-            width: 60%;
-            padding: 2rem 0;
+    
+        #{&}__contacts{
+            order: 3;
+            @include setDisplayFlex(row,center,center);
+            margin: 2rem 0;
+            width: 100%;
+            .inside{
+                display: inline-block;
+                margin-bottom: 0;
+                width: 50%;
+                svg{
+                    max-width: 25rem;
+                }
+            }
+            ul{
+                width: 50%;
+                margin: 1rem 0;
+                text-align: left;
+                li{
+                    span:nth-child(odd){
+                        width: 10%;
+                        font-size: 3rem;
+                    }
+                    span:nth-child(even){
+                        width: 70%;
+                    }
+               }
+            }
         }
     }
 }
@@ -153,73 +181,39 @@
 @include media-xl{
     .header{
         #{&}__container{
-            @include setDisplayFlex(column,center,center);
-            
             max-width: getMaxWidth(m-width-xl);
-            margin: 0 auto;
-            height: 100%;
         }
         #{&}__logo{
-            width: 45%;
+            width: 43%;
             margin: auto;
-
-        }
-        #{&}__info{
-            max-width: 40rem;
         }
     }
     .about{
         #{&}__container{
-            @include setDisplayFlex(row,center,center);
-
             max-width: getMaxWidth(m-width-xl);
-            margin: 0 auto;
-            height: 100%;
         }
         #{&}__image-box{
-            @include setDisplayFlex(row,center,center);
-            height: 48rem;
-
-            img{
-                height: 100%;
-                width: 100%;
-            }
+            max-width: 35rem;
         }
     }
     .works{
         #{&}__container{
-            @include setDisplayFlex(row,center,center);
-            
             max-width: getMaxWidth(m-width-xl);
-            margin: 0 auto;
-            padding: 1rem;
-            min-height: 100%;
-
-            h2{
-                display: unset;
-                margin-top: auto;
-            }
-        }
-        #{&}__list{
-            &__container{
-                max-width: getMaxWidth(m-width-xl);
-
-                ul{
-                    max-width: 100%;
-                }
-            }
-
         }
         #{&}__img-box{
-            width: 100%;
+            max-width: 35rem;
         }
     }
     .footer{
         #{&}__container{
             max-width: getMaxWidth(m-width-xl);
         }
-        #{&}__logo{
-            width: 40%;
+        #{&}__contacts{
+            .inside{
+                svg{
+                    max-width: 30rem;
+                }
+            }
         }
     }
 }
