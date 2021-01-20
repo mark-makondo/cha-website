@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/cha-website/static/css/main.1b83e4f1.chunk.css",
+    "main.css": "/cha-website/static/css/main.a81e9bd7.chunk.css",
     "main.js": "/cha-website/static/js/main.08d4a5fd.chunk.js",
     "main.js.map": "/cha-website/static/js/main.08d4a5fd.chunk.js.map",
     "runtime-main.js": "/cha-website/static/js/runtime-main.b97cc628.js",
@@ -8,7 +8,7 @@
     "static/js/2.6ab35e8f.chunk.js": "/cha-website/static/js/2.6ab35e8f.chunk.js",
     "static/js/2.6ab35e8f.chunk.js.map": "/cha-website/static/js/2.6ab35e8f.chunk.js.map",
     "index.html": "/cha-website/index.html",
-    "static/css/main.1b83e4f1.chunk.css.map": "/cha-website/static/css/main.1b83e4f1.chunk.css.map",
+    "static/css/main.a81e9bd7.chunk.css.map": "/cha-website/static/css/main.a81e9bd7.chunk.css.map",
     "static/js/2.6ab35e8f.chunk.js.LICENSE.txt": "/cha-website/static/js/2.6ab35e8f.chunk.js.LICENSE.txt",
     "static/media/about-pic.8c3db5e7.jpg": "/cha-website/static/media/about-pic.8c3db5e7.jpg",
     "static/media/cha-logo.a8dfc907.svg": "/cha-website/static/media/cha-logo.a8dfc907.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.b97cc628.js",
     "static/js/2.6ab35e8f.chunk.js",
-    "static/css/main.1b83e4f1.chunk.css",
+    "static/css/main.a81e9bd7.chunk.css",
     "static/js/main.08d4a5fd.chunk.js"
   ]
 }
