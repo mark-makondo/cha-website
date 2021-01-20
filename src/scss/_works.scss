@@ -26,16 +26,14 @@
             z-index: 1;
             width: 100%;
             height: auto;
-
             h2{
                 display: unset;
                 color: getColor(default);
-                margin:1.5rem 0;
                 letter-spacing: 2px;
             }
             ul{
                 max-width: 50%;
-                margin: 0 auto;
+                margin: 1rem auto;
                 li{ 
                     font-style: italic;
                     color: getColor(not-active);

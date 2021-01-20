@@ -4,6 +4,7 @@
     padding: 1rem;
 
     #{&}__container{
+        position: relative;
         @include setDisplayFlex(column,center,center);
         height: 100%;
 
@@ -11,6 +12,14 @@
             display: none;
             color: getColor(primary);
         }
+    }
+    
+    #{&}__title{
+        display: unset;
+        position: absolute;
+        top: 3rem;
+        text-align: center;
+        color: getColor(active);
     }
 
     #{&}__half{

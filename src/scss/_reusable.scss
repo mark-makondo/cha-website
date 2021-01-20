@@ -22,22 +22,22 @@ $bg-colors: (
 
 $font-size: (
   // s-screen
-  "h1-s": 60px,
+  "h1-s": 55px,
   "h2-s": 30px,
   "n-span-s": 20px,
   "f-span-s": 15px,
   // m-screen
-  "h1-m": 80px,
+  "h1-m": 70px,
   "h2-m": 45px,
   "n-span-m": 30px,
   "f-span-m": 20px,
   // l-screen
-  "h1-l": 100px,
+  "h1-l": 75px,
   "h2-l": 70px,
   "n-span-l": 35px,
   "f-span-l": 25px,
   // xl-screen
-  "h1-xl": 130px,
+  "h1-xl": 105px,
   "h2-xl": 100px,
   "n-span-xl": 50px,
   "f-span-xl": 40px
@@ -58,12 +58,12 @@ $font-size: (
 
 @mixin setFontSize($h1, $h2, $nspan, $fspan){
   h1{
-    font-family: 'Dancing Script', cursive;
-    font-weight: bold;
+    font-weight: 300;
     color: getColor(primary);
     font-size: getFontSize($h1);
   }
   h2{
+    font-weight: 300;
     font-size: getFontSize($h2);
   }
   .n-span{

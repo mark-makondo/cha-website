@@ -13,6 +13,7 @@ const About: React.FC<Props> = () => {
             <div className="about__container">
                 <div className="about__half">
                 </div>
+                <h1 className="about__title">Who am I?</h1>
                 <h2>.</h2>
                 <div className="about__image-box">
                     <img src={Profile} alt="Hair sample"/>
