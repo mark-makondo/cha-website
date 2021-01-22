@@ -10,7 +10,7 @@ interface Props{
 const Footer: React.FC<Props> = ({}) => {
     return(
 
-        <section className="footer">
+        <section className="footer" id="Contact">
             <div className="footer__container">
                 <div className="footer__logo outside"><Logo/></div>
                 <span className="n-span">Check this out for more!</span>

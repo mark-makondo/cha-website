@@ -20,7 +20,7 @@ h5 {
 }
 
 body {
-  background-color: #110101;
+  background-color: black;
 }
 
 ul li {
@@ -63,8 +63,125 @@ h2 {
   font-size: 15px;
 }
 
-.navbar {
-  display: none;
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 2rem;
+  width: 70vw;
+  height: auto;
+  background-color: #000000e3;
+  color: #888484;
+  z-index: 99;
+  border-radius: 0 .5rem .5rem 0;
+  -webkit-box-shadow: 0px 0px 24px 1px rgba(22, 22, 22, 0.5);
+          box-shadow: 0px 0px 24px 1px rgba(22, 22, 22, 0.5);
+  overflow: hidden;
+}
+
+.nav .nav__container {
+  width: 100%;
+  text-align: left;
+}
+
+.nav .nav__container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0;
+}
+
+.nav .nav__container ul li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0rem 2rem 1rem 2rem;
+}
+
+.nav .nav__container ul li::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0%;
+  border: solid 2px;
+  border-style: dashed;
+  border-color: #EC625F;
+  visibility: hidden;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.nav .nav__container ul li:hover::after {
+  width: 50%;
+  visibility: visible;
+}
+
+.nav .nav__container ul li:last-child {
+  border: 1px solid;
+  border-color: #FBEBEB;
+  color: #FBEBEB;
+  border-radius: 20rem;
+  padding: .5rem;
+}
+
+.nav .nav__arrow {
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  min-width: 2.5rem;
+  width: 40px;
+}
+
+.nav .nav__arrow svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #EC625F;
+  stroke: #FBEBEB;
+  stroke-width: 2px;
+  stroke-dasharray: 0;
+  -webkit-transition: fill .2s linear;
+  transition: fill .2s linear;
 }
 
 .header {
@@ -189,6 +306,7 @@ h2 {
   height: 50%;
   max-width: 20.5rem;
   padding: .5rem;
+  background-color: #110101;
 }
 
 .about .about__image-box img {
@@ -453,7 +571,7 @@ h2 {
   color: #FBEBEB;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   h1 {
     font-weight: 300;
     color: #EC625F;
@@ -505,6 +623,30 @@ h2 {
   }
   .f-span {
     font-size: 25px;
+  }
+  .nav .nav__container ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav .nav__container ul li {
+    margin: 0rem 2rem 0rem 2rem;
+  }
+  .nav .nav__arrow {
+    min-width: 2.5rem;
+    width: 40px;
   }
   .header .header__container {
     max-width: 60rem;
@@ -753,6 +895,9 @@ h2 {
   }
   .f-span {
     font-size: 40px;
+  }
+  .nav .nav__arrow {
+    min-width: 3rem;
   }
   .header .header__container {
     max-width: 85rem;

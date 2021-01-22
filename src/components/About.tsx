@@ -9,7 +9,7 @@ interface Props{
 
 const About: React.FC<Props> = () => {
     return(
-        <section className="about">
+        <section className="about" id="About">
             <div className="about__container">
                 <h2>.</h2>
                 <div className="about__container__fit">
@@ -23,7 +23,7 @@ const About: React.FC<Props> = () => {
                         <div className="about__info__container">
                             <h2> .Chanda Makondo.</h2>
                             <span className="n-span">.Certified Beauty Artist</span>
-                            <span className="n-span">.Skilled @Everthing</span>
+                            <span className="n-span">.Skilled @Everything</span>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,149 @@
+// // responsive animation
+        // ScrollTrigger.matchMedia({
+
+        //     "(min-width: 769px)": function() {
+
+        //         // let nav_tl = gsap.timeline({paused: true}).add( navbarAnimation() );
+        //         // eventListenersTween("click", nav_arrow, nav_tl);
+
+        //         return function() { 
+                   
+        //             // min_width_769_reset(nav_tl);
+
+        //         };
+        //     },
+        //     "(max-width: 768px)": function() {
+        //         let nav_tl = gsap.timeline({});
+
+        //         nav_tl.to(nav, { clearProps: "all"}, "clear")
+        //         .to(nav_arrow_svg, { clearProps: "all"}, "clear")
+        //         .to(nav_list, { clearProps: "all"}, "clear")
+
+
+        //         // let nav_tl = gsap.timeline({paused: true}).add( navbarAnimation() );
+        //         // eventListenersTween("click", nav_arrow, nav_tl);
+
+               
+
+        //         return function() {
+        //             nav_tl.to(nav, { clearProps: "all"}, "clear")
+        //             .to(nav_arrow_svg, { clearProps: "all"}, "clear")
+        //             .to(nav_list, { clearProps: "all"}, "clear")
+        //             // max_width_768_reset(nav_tl);
+        //         };
+        //     },
+
+        //     // all 
+        //     "all": function() {
+        //         // navbarSmoothScroll("put navbar link query here");
+        //         let nav_tl = gsap.timeline({paused: true}).add( navbarAnimation() );
+        //         eventListenersTween("click", nav_arrow, nav_tl);
+        //     }
+        // });
+    }
+
+     //#region  // reset animation here per new animation in responsiveAnimation() 
+        // const nav_reset = (targetWidth:string) =>{
+        //     gsap.set(nav, { width: targetWidth });
+        //     gsap.set(nav_arrow_svg, { rotate: "0deg", x:0, fill:"#b64a47",strokeDasharray: "0px" });
+        //     gsap.set(nav_list, { x:0, autoAlpha: 1, });
+        // }
+
+        // // max 769 min 768 
+        // const min_width_769_reset = (tl:any) =>{
+        //     let width = "12.25rem";
+
+        //     nav_reset(width)
+
+        //     tl.kill();
+        //     tl.clear();
+        // }
+        // const max_width_768_reset = (tl:any) => {
+        //     let width =  "14.375rem";
+
+        //     nav_reset(width)
+        //     tl.kill();
+        //     tl.clear();
+        // }
+    //#endregion
+
+    const toPX = (value:string) => {
+        return parseFloat(value) / 100 * (/vh/gi.test(value) ? window.innerHeight : window.innerWidth);
+    }
+
+    // navbar animation
+    const navbarAnimation = () =>{
+        let duration:number = 1;
+        let label:string = "nav";
+        let tl = gsap.timeline()
+
+        tl.to(nav, { duration: duration, width: toPX("15vw"), ease:"power4.in" }, label)
+        .to(nav_arrow_svg, { duration: duration, rotate: "180deg", x:-20, fill:"transparent",strokeDasharray: "110px", ease: "none" }, label)
+        .to(nav_list, { x:-50, autoAlpha: 0, stagger: -.1 },label)
+
+        return tl;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // responsive animation 
+     const responsiveAnimation = () => {
+
+        let mediaQuery = window.matchMedia("(max-width: 768px)")
+        let mediaQuery2 = window.matchMedia("(min-width: 769px)")
+
+        const mediaQueryTween = () => {
+
+            let tl = gsap.timeline({paused: true, reversed: true});
+            tl.add( navbarAnimation() )
+
+            // eventListenersTween("click", nav_arrow, tl);
+            if(mediaQuery.matches){
+                clearProps();
+                eventListenersTween("click", nav_arrow, tl);
+
+                // nav_arrow.addEventListener("click", () => {
+                //     clickFunction(tl);
+                // })
+
+                // const clickFunction = (tl:any) =>{
+                //     tl.reversed() ? tl.play() : tl.reverse();
+                //     console.log("this is clicked")
+                // }
+
+            }else{
+                clearProps();
+                tl.kill();
+                tl.clear();
+                // tl.reversed(true);
+
+            }
+
+            if(mediaQuery2.matches){
+                // clearProps();
+            }else{
+                clearProps();
+                tl.kill();
+                tl.clear();
+                // tl.reversed(true);
+            }
+
+
+        }
+        
+        mediaQuery.addEventListener( "change", () => {
+            mediaQueryTween();
+        })       
+        
+       
+    }

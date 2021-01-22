@@ -1,5 +1,8 @@
-// responsive medium screen //768px
+// responsive medium screen //769px
 @include media-md{
+    // .nav{
+        // width: 14.375rem;
+    // }
     .header{
         #{&}__container{
             max-width: getMaxWidth(m-width-m);
@@ -32,6 +35,23 @@
 
 // responsive large screen //1200px
 @include media-lg{
+    .nav{
+        // width: 46.25rem;
+        #{&}__container{
+            ul{
+                @include setDisplayFlex(row,center,center);
+
+                li{
+                    
+                    margin: 0rem 2rem 0rem 2rem;
+                }
+            }
+        }   
+        #{&}__arrow{
+            min-width: 2.5rem;
+            width: 40px;
+        }
+    }
     .header{
         #{&}__container{
             max-width: getMaxWidth(m-width-l);
@@ -187,6 +207,12 @@
 
 // responsive x-large screen //1600px
 @include media-xl{
+    .nav{
+        // width: 58.4375rem;
+        #{&}__arrow{
+            min-width: 3rem;
+        }
+    }
     .header{
         #{&}__container{
             max-width: getMaxWidth(m-width-xl);

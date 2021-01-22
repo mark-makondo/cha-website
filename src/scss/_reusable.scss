@@ -14,10 +14,13 @@ $font-colors: (
 );
 
 $bg-colors: (
-  "primary": #110101,
+  "primary": black,
   "secondary": #FBEBEB,
   "light-red-tr": #2E242480,
-  "dark-pink":#E2D6D6
+  "dark-pink":#E2D6D6,
+  "primary-tr": #110101e8,
+  "black-tr": #000000e3,
+  "prev-primary":#110101
 );
 
 $font-size: (
@@ -84,7 +87,7 @@ $font-size: (
 
 // responsive css
 @mixin media-md{
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 769px){
 
     @include setFontSize(h1-m, h2-m, n-span-m, f-span-m);
     @content;

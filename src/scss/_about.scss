@@ -34,6 +34,7 @@
         height: 50%;
         max-width: getMaxWidth(m-width-s);
         padding: .5rem;
+        background-color: getBgColor(prev-primary);
         img{
             mix-blend-mode: luminosity;
         }

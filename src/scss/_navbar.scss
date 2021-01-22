@@ -1,3 +1,71 @@
-.navbar{
-    display: none;
+.nav{
+    @include setDisplayFlex(row,flex-end,center);
+    position: fixed;
+    top: 2rem;
+    // width: 12.25rem;
+    width: 70vw;
+    height: auto;
+    background-color: getBgColor(black-tr);
+    color:getColor(not-active);
+    z-index: 99;
+    border-radius: 0 .5rem .5rem 0;
+    box-shadow: 0px 0px 24px 1px rgba(22,22,22,0.5);
+    overflow: hidden;
+    
+    #{&}__container{
+        width: 100%;
+        text-align: left;
+        
+        ul{
+            @include setDisplayFlex(column,center,center);
+            padding: 2rem 0;
+            li{
+                position: relative;
+                @include setDisplayFlex(column,flex-end,center);
+                margin: 0rem 2rem 1rem 2rem;
+
+                &::after{
+                    box-sizing: inherit;
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0%;
+                    border: solid 2px;
+                    border-style: dashed;
+                    border-color: getColor(primary);
+                    visibility: hidden;
+                    transition: all .5s linear;
+                }
+                &:hover{
+                    &::after{
+                        width: 50%;
+                        visibility: visible;
+                    }
+                }
+                
+                &:last-child{
+                    border: 1px solid;
+                    border-color: getColor(active);
+                    color: getColor(active);;
+                    border-radius: 20rem;
+                    padding: .5rem;
+                }
+            }
+        }
+    }   
+    #{&}__arrow{
+        position: relative;
+        flex-shrink: 0;
+        min-width: 2.5rem;
+        width: 40px;
+
+        svg{
+            display: flex;
+            fill: getColor(primary);
+            stroke: getColor(active);
+            stroke-width: 2px;
+            stroke-dasharray: 0;
+            transition: fill .2s linear;
+        }
+    }
 }

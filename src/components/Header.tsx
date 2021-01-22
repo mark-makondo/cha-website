@@ -10,7 +10,7 @@ interface Props {
 
 const Header: React.FC<Props> = ({}) => {
     return (
-        <section className="header">
+        <section className="header" id="Home">
             <div className="header__container">
                 <div className="header__logo">
                         <HeroLogo/>
