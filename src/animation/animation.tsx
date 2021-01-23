@@ -55,13 +55,14 @@ const animations = () => {
 
      // responsive animation 
     const responsiveAnimation = () => {
-        
-        // Scroll Trigger
+
         ScrollTrigger.matchMedia({
             // desktop
             "(min-width: 769px)": function() {
+
                 animate_navHandler();
                 scrollTriggerArray("#Home", "top+=100 top", "top+=100 bottom-=200", false, "nav-compressed", false, 0, "nav-compress");
+
                 return function() {
                     ScrollTrigger.refresh(true)
                 };
@@ -72,6 +73,7 @@ const animations = () => {
                 expanded = false;
                 compressed = true;
                 animate_navHandler();
+              
                 return function() {
                     clicked = false;
                     expanded = true;
@@ -84,11 +86,12 @@ const animations = () => {
                 // smooth scroll
                 navbarSmoothScroll(gsap_navList);
                 // sections
-                scrollTriggerArray("#Home", "top top+=50", "bottom-=100 bottom-=500", false, "logo-animated", false, 0, "logo-animate");
-                scrollTriggerArray("#About", "top top", "bottom top", false, "about-pinned", true, 1, "about-pin-animate");
+                scrollTriggerArray("#Home", "top top+=50", "bottom-=100 bottom-=500", false, "logo-animated", false, 0, "logo-animate");     
+                scrollTriggerArray("#About", "top top+=50", "bottom bottom-=500", false, "about-mobile-animating", false, false, "about-animate");    
                 scrollTriggerArray("#Works", "top top+=50", "bottom bottom-=500", false, "works-animated", false, 0, "works-animate");
                 // nav links
-                scrollTriggerArray("section", "top+=50 top+=55", "bottom+=46 top+=50", false, "nav-active", false, 0, "navLink-animate");
+                scrollTriggerArray("section", "top bottom-=100", "bottom bottom-=100", false, "nav-active", false, 0, "navLink-animate");
+                // "top+=50 top+=55", "bottom+=46 top+=50"
             }
         })
 
@@ -198,14 +201,17 @@ const animations = () => {
                 animate_headerLogo(tl);
                 ScrollTrigger.create(scrollTriggerObj)
 
-            }else if(type === "about-pin-animate"){
-                animate_pinnedAbout(main__targetArr, start, end , scrub, pin, marker);
             }else if(type === "works-animate"){
                 animate_works(tl);
                 ScrollTrigger.create(scrollTriggerObj);
+
             }else if(type === "navLink-animate"){
                 navLinkScroll(tl, navList[i])
                 ScrollTrigger.create(scrollTriggerObj);
+
+            }else if(type === "about-animate"){
+                animate_pinnedAbout(main__targetArr, start, end , scrub, pin, marker);
+
             }else{ console.log("invalid type") }
         })
     }
@@ -222,6 +228,8 @@ const animations = () => {
             tl.play();
         }else if(scroll_type === "navLink-animate"){
             tl.play();
+        }else if(scroll_type === "about-mobile-animate"){
+            tl.play();
         }
     }
     const onLeave = (tl:any) =>{
@@ -231,6 +239,8 @@ const animations = () => {
         }else if(scroll_type === "works-animate"){
             tl.reverse();
         }else if(scroll_type === "navLink-animate"){
+            tl.reverse();
+        }else if(scroll_type === "about-mobile-animate"){
             tl.reverse();
         }
     }
@@ -246,6 +256,8 @@ const animations = () => {
             tl.play();
         }else if(scroll_type === "navLink-animate"){
             tl.play();
+        }else if(scroll_type === "about-mobile-animate"){
+            tl.play();
         }
     }
     const onLeaveBack = (tl:any) =>{
@@ -255,6 +267,8 @@ const animations = () => {
         }else if(scroll_type === "works-animate"){
             tl.reverse();
         }else if(scroll_type === "navLink-animate"){
+            tl.reverse();
+        }else if(scroll_type === "about-mobile-animate"){
             tl.reverse();
         }
     }
@@ -287,16 +301,7 @@ const animations = () => {
     //#endregion
     //#region About Animation
     const animate_pinnedAbout = (target:string, start:string, end:string, scrub:number|boolean, pin:boolean, marker: boolean) => {
-
-        let el_about = [about_title, about_name, about_say1, about_say2];
-        let label = "appear", label_switch = ">";
-        let clr_active = "#EC625F", clr_notActive = "#FBEBEB";
-
-        gsap.set( about_img, { scale: 0 } );
-        gsap.set( el_about, { autoAlpha: 0, xPercent: -10 } );
-        gsap.set( about_info, { autoAlpha: 0 } );
-        gsap.set( about_name, { color: "#FBEBEB"} );
-   
+        
         let about_tl = gsap.timeline({
             scrollTrigger:{
                 trigger: target,
@@ -304,25 +309,38 @@ const animations = () => {
                 end: end,
                 scrub: scrub,
                 pin: pin,
-                markers: marker
+                markers: marker,
+                invalidateOnRefresh: true,
+                toggleActions: "play pause resume reverse"
             }
         })
-        about_tl
-            .to(about_img, { duration: 3, scale: 1 }, label )
-            .to(about_title, { autoAlpha: 1, xPercent: 0 }, label )
-            .to(about_info, { autoAlpha: 1 }, label+">.5" )
-            .add( animate_switchColor( about_name, clr_notActive, clr_active, label_switch) )
-            .add( animate_switchColor( about_say1, clr_active, clr_notActive, label_switch) )
-            .add( animate_switchColor( about_say2, clr_active, clr_notActive, label_switch) )
+        
+        animate_about(about_tl);
+
     }   
-    const animate_switchColor = (target:any, activeColor:string, notActiveColor:string, label:string) => {
-        let tl = gsap.timeline({});
 
-        tl.to(target, { duration: 2, autoAlpha: 1, xPercent: 0,  color: activeColor, ease: "power4.inOut" }, label)
-        tl.to(target, { color: notActiveColor, ease: "power4.inOut" }, label)
+    const animate_about = (tl:gsap.core.Timeline) =>{
 
-        return tl;
+        let el_about = [about_title, about_name, about_say1, about_say2];
+        let duration = .5;
+        let label = "appear", label_switch = ">";
+        let clr_active = "#EC625F", clr_notActive = "#FBEBEB";
+
+        gsap.set( el_about, { autoAlpha: 0, xPercent: -10 } );
+        gsap.set( about_img, { scale: 0 } );
+        gsap.set( about_info, { autoAlpha: 0, scaleX: 0 } );
+        gsap.set( about_name, { color: "#FBEBEB"} );
+
+        tl.to( about_img, { duration: 2, scale: 1 }, label )
+        .to( about_title, { duration: 2, autoAlpha: 1, xPercent: 0 }, label )
+        .to( about_info, { autoAlpha: 1, scaleX: 1}, label+">.5" )
+        .to( about_name, { duration: duration, autoAlpha: 1, xPercent: 0,  color: clr_active, ease: "power4.inOut" }, label_switch )
+        .to( about_say1, { duration: duration, autoAlpha: 1, xPercent: 0,  color: clr_active, ease: "power4.inOut" }, "nameToSay1" )
+        .to( about_name, { color: clr_notActive, ease: "power4.inOut" }, "nameToSay1")
+        .to( about_say2, { duration: duration, autoAlpha: 1, xPercent: 0,  color: clr_active, ease: "power4.inOut" }, "say1ToSay2" )
+        .to( about_say1, { color: clr_notActive, ease: "power4.inOut" }, "say1ToSay2")
     }
+
     //#endregion
     //#region works Animation
     const animate_works = (tl:any) => { 

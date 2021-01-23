@@ -150,7 +150,6 @@ h2 {
 .nav .nav__container ul li:last-child {
   border: 1px solid;
   border-color: #FBEBEB;
-  color: #FBEBEB;
   border-radius: 20rem;
   padding: 0.5rem 1rem;
 }
@@ -790,9 +789,10 @@ h2 {
     margin-top: unset;
   }
   .about .about__info__container {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-right: 10rem;
   }
   .about .about__info__container h2 {
     position: unset;
