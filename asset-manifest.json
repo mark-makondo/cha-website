@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/cha-website/static/css/main.6889c2fd.chunk.css",
-    "main.js": "/cha-website/static/js/main.46318f58.chunk.js",
-    "main.js.map": "/cha-website/static/js/main.46318f58.chunk.js.map",
+    "main.css": "/cha-website/static/css/main.474ccae6.chunk.css",
+    "main.js": "/cha-website/static/js/main.d2968390.chunk.js",
+    "main.js.map": "/cha-website/static/js/main.d2968390.chunk.js.map",
     "runtime-main.js": "/cha-website/static/js/runtime-main.b97cc628.js",
     "runtime-main.js.map": "/cha-website/static/js/runtime-main.b97cc628.js.map",
     "static/js/2.74c8992f.chunk.js": "/cha-website/static/js/2.74c8992f.chunk.js",
     "static/js/2.74c8992f.chunk.js.map": "/cha-website/static/js/2.74c8992f.chunk.js.map",
     "index.html": "/cha-website/index.html",
-    "static/css/main.6889c2fd.chunk.css.map": "/cha-website/static/css/main.6889c2fd.chunk.css.map",
+    "static/css/main.474ccae6.chunk.css.map": "/cha-website/static/css/main.474ccae6.chunk.css.map",
     "static/js/2.74c8992f.chunk.js.LICENSE.txt": "/cha-website/static/js/2.74c8992f.chunk.js.LICENSE.txt",
     "static/media/about-pic.8c3db5e7.jpg": "/cha-website/static/media/about-pic.8c3db5e7.jpg",
     "static/media/beauty-care.46ebaa4f.jpg": "/cha-website/static/media/beauty-care.46ebaa4f.jpg",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.b97cc628.js",
     "static/js/2.74c8992f.chunk.js",
-    "static/css/main.6889c2fd.chunk.css",
-    "static/js/main.46318f58.chunk.js"
+    "static/css/main.474ccae6.chunk.css",
+    "static/js/main.d2968390.chunk.js"
   ]
 }
