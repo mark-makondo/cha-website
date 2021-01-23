@@ -2,12 +2,11 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
-import CSSRulePlugin from 'gsap/CSSRulePlugin';
 
 // helper functions
 import Helper from '../helper/helper';
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, CSSRulePlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const animations = () => {
     //#region global variables
@@ -18,8 +17,6 @@ const animations = () => {
     let nav_list = Helper.querySelectorAll(".nav__container ul li");
     let gsap_navList = gsap.utils.toArray(".nav__container ul li a");
     let navList = document.querySelectorAll(".nav__container ul li a");
-    // let gsap_navLists = gsap.utils.toArray(".nav__container ul li");
-    // let navLists = document.querySelectorAll(".nav__container ul li");
     // header
     let hero_beauty =  Helper.querySelector(".header__logo #hero-beauty");
     let hero_lineOne =  Helper.querySelector(".header__logo #hero-lineOne");
@@ -42,7 +39,6 @@ const animations = () => {
     let works_nailCare = Helper.querySelector(".works__list__container ul li:nth-of-type(4)");
     let works_waxing = Helper.querySelector(".works__list__container ul li:nth-of-type(5)");
     let works_img = Helper.querySelector(".works__img-box");
-
 
     // nav handler states
     let clicked = false;
@@ -210,7 +206,7 @@ const animations = () => {
                 ScrollTrigger.create(scrollTriggerObj);
 
             }else if(type === "about-animate"){
-                animate_pinnedAbout(main__targetArr, start, end , scrub, pin, marker);
+                animate_about(main__targetArr, start, end , scrub, pin, marker);
 
             }else{ console.log("invalid type") }
         })
@@ -300,7 +296,7 @@ const animations = () => {
     }
     //#endregion
     //#region About Animation
-    const animate_pinnedAbout = (target:string, start:string, end:string, scrub:number|boolean, pin:boolean, marker: boolean) => {
+    const animate_about = (target:string, start:string, end:string, scrub:number|boolean, pin:boolean, marker: boolean) => {
         
         let about_tl = gsap.timeline({
             scrollTrigger:{
@@ -311,15 +307,15 @@ const animations = () => {
                 pin: pin,
                 markers: marker,
                 invalidateOnRefresh: true,
-                toggleActions: "play pause resume reverse"
+                toggleActions: "play reverse play reverse"
             }
         })
         
-        animate_about(about_tl);
+        animation_about(about_tl);
 
     }   
 
-    const animate_about = (tl:gsap.core.Timeline) =>{
+    const animation_about = (tl:gsap.core.Timeline) =>{
 
         let el_about = [about_title, about_name, about_say1, about_say2];
         let duration = .5;
