@@ -1,30 +1,31 @@
 {
   "files": {
-    "main.css": "/cha-website/static/css/main.a74a2d1b.chunk.css",
-    "main.js": "/cha-website/static/js/main.bc45c5d0.chunk.js",
-    "main.js.map": "/cha-website/static/js/main.bc45c5d0.chunk.js.map",
+    "main.css": "/cha-website/static/css/main.6889c2fd.chunk.css",
+    "main.js": "/cha-website/static/js/main.46318f58.chunk.js",
+    "main.js.map": "/cha-website/static/js/main.46318f58.chunk.js.map",
     "runtime-main.js": "/cha-website/static/js/runtime-main.b97cc628.js",
     "runtime-main.js.map": "/cha-website/static/js/runtime-main.b97cc628.js.map",
     "static/js/2.74c8992f.chunk.js": "/cha-website/static/js/2.74c8992f.chunk.js",
     "static/js/2.74c8992f.chunk.js.map": "/cha-website/static/js/2.74c8992f.chunk.js.map",
     "index.html": "/cha-website/index.html",
-    "static/css/main.a74a2d1b.chunk.css.map": "/cha-website/static/css/main.a74a2d1b.chunk.css.map",
+    "static/css/main.6889c2fd.chunk.css.map": "/cha-website/static/css/main.6889c2fd.chunk.css.map",
     "static/js/2.74c8992f.chunk.js.LICENSE.txt": "/cha-website/static/js/2.74c8992f.chunk.js.LICENSE.txt",
     "static/media/about-pic.8c3db5e7.jpg": "/cha-website/static/media/about-pic.8c3db5e7.jpg",
     "static/media/beauty-care.46ebaa4f.jpg": "/cha-website/static/media/beauty-care.46ebaa4f.jpg",
     "static/media/cha-logo.a8dfc907.svg": "/cha-website/static/media/cha-logo.a8dfc907.svg",
+    "static/media/default.e75462d8.jpg": "/cha-website/static/media/default.e75462d8.jpg",
     "static/media/eyebrows.7d81f5c8.jpg": "/cha-website/static/media/eyebrows.7d81f5c8.jpg",
     "static/media/hair.8d3d4426.jpg": "/cha-website/static/media/hair.8d3d4426.jpg",
     "static/media/hero-logo-colored.68122ece.svg": "/cha-website/static/media/hero-logo-colored.68122ece.svg",
     "static/media/left-arrow.f08f091b.svg": "/cha-website/static/media/left-arrow.f08f091b.svg",
     "static/media/nail-care.6cc19323.jpg": "/cha-website/static/media/nail-care.6cc19323.jpg",
-    "static/media/rect-lines.882cfce4.svg": "/cha-website/static/media/rect-lines.882cfce4.svg",
+    "static/media/stylesheet.css": "/cha-website/static/media/norwester-webfont.b0f6019a.woff2",
     "static/media/works-beauty.a59c4403.svg": "/cha-website/static/media/works-beauty.a59c4403.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.b97cc628.js",
     "static/js/2.74c8992f.chunk.js",
-    "static/css/main.a74a2d1b.chunk.css",
-    "static/js/main.bc45c5d0.chunk.js"
+    "static/css/main.6889c2fd.chunk.css",
+    "static/js/main.46318f58.chunk.js"
   ]
 }
