@@ -21,25 +21,37 @@
         margin-bottom: 1.5rem;
 
         &__container{
+            @include setDisplayFlex(column,center,flex-end);
             position: relative;
-            text-align: center;
+            text-align: right;
             z-index: 1;
-            width: 100%;
             height: auto;
+            h1{
+                color: getColor(default);
+            }
             h2{
                 display: unset;
                 color: getColor(default);
-                letter-spacing: 2px;
+                letter-spacing: 4px;
             }
             ul{
-                max-width: 50%;
-                margin: 1rem auto;
+                margin-top: 1rem;
                 li{ 
                     font-style: italic;
                     color: getColor(not-active);
-                    svg{
-                        visibility: hidden;
+                    padding: .150rem;
+                    span{
+                        display: inline-block;
+                        transition: all .3s linear;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                        &.active{
+                            color: getColor(primary);
+                            transform: scale(1.2);
+                        }
                     }
+                    
                 }
             }
         }

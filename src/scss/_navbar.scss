@@ -23,6 +23,7 @@
                 position: relative;
                 @include setDisplayFlex(column,flex-end,center);
                 margin: 0rem 2rem 1rem 2rem;
+                font-weight: bold;
                 &:hover{
                     transform: scale(1.1) !important;
                 }
@@ -32,7 +33,7 @@
                     border-color: getColor(active);
                     color: getColor(active);;
                     border-radius: 20rem;
-                    padding: .5rem;
+                    padding: 0.5rem 1rem;
                 }
             }
         }

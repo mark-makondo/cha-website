@@ -14,7 +14,7 @@ const About: React.FC<Props> = () => {
                 <h2>.</h2>
                 <div className="about__container__fit">
                     <div className="about__half">
-                        <h1 className="about__title">Who am I?</h1>
+                        <h1 className="about__title">Who Am I?</h1>
                     </div>
                     <div className="about__image-box">
                         <img src={Profile} alt="Hair sample"/>
@@ -22,8 +22,8 @@ const About: React.FC<Props> = () => {
                     <div className="about__info">
                         <div className="about__info__container">
                             <h2> .Chanda Makondo.</h2>
-                            <span className="n-span">.Certified Beauty Artist</span>
-                            <span className="n-span">.Skilled @Everything</span>
+                            <span className="n-span">#Experienced Professional</span>
+                            <span className="n-span">#Certified Beauty Artist</span>
                         </div>
                     </div>
                 </div>

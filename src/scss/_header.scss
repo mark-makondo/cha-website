@@ -13,8 +13,8 @@
     #{&}__info{
         position: relative;
         text-align: center;
-        color: getColor(active);
-        font-style: italic;
+        color: getColor(not-active);
+        // font-style: italic;
         top: -5%;
         
         span{

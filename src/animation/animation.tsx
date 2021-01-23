@@ -35,12 +35,14 @@ const animations = () => {
     let about_say2 = Helper.querySelector(".about__info__container span:nth-of-type(2)");
     // works
     let works_title = Helper.querySelector(".works__list__container h2");
+    let works_title_h1 = Helper.querySelector(".works__list__container h1");
     let works_hair = Helper.querySelector(".works__list__container ul li:nth-of-type(1)");
     let works_eyebrows = Helper.querySelector(".works__list__container ul li:nth-of-type(2)");
     let works_beautyCare = Helper.querySelector(".works__list__container ul li:nth-of-type(3)");
     let works_nailCare = Helper.querySelector(".works__list__container ul li:nth-of-type(4)");
     let works_waxing = Helper.querySelector(".works__list__container ul li:nth-of-type(5)");
     let works_img = Helper.querySelector(".works__img-box");
+
 
     // nav handler states
     let clicked = false;
@@ -309,7 +311,7 @@ const animations = () => {
             .to(about_img, { duration: 3, scale: 1 }, label )
             .to(about_title, { autoAlpha: 1, xPercent: 0 }, label )
             .to(about_info, { autoAlpha: 1 }, label+">.5" )
-            .add( animate_switchColor( about_name, clr_active, clr_notActive, label_switch) )
+            .add( animate_switchColor( about_name, clr_notActive, clr_active, label_switch) )
             .add( animate_switchColor( about_say1, clr_active, clr_notActive, label_switch) )
             .add( animate_switchColor( about_say2, clr_active, clr_notActive, label_switch) )
     }   
@@ -325,14 +327,17 @@ const animations = () => {
     //#region works Animation
     const animate_works = (tl:any) => { 
 
-        let el_works = [works_title, works_hair, works_eyebrows, works_beautyCare, works_nailCare, works_waxing];
+        let el_works = [ works_hair, works_eyebrows, works_beautyCare, works_nailCare, works_waxing];
+        let gsap_el_works = [works_title, works_hair, works_eyebrows, works_beautyCare, works_nailCare, works_waxing];
         let label = "works"
         
-        gsap.set( el_works, { autoAlpha: 0, xPercent: -10  })
-        gsap.set( works_img, { autoAlpha: 0 })
+        gsap.set( [gsap_el_works], { autoAlpha: 0, xPercent: 50  })
+        gsap.set( [works_img, works_title_h1], { autoAlpha: 0 })
 
-        tl.to(el_works, { duration: 1, autoAlpha: 1, xPercent: 0, stagger: .5 }, label );
-        tl.to( works_img, { duration: 1, autoAlpha: 1 },label+"+=3"  )
+        tl.to( works_title_h1, { duration: 1, autoAlpha: 1 }, label)
+        tl.to( works_title, { autoAlpha:1, xPercent: 0 }, label+"+=.5")
+        tl.to(el_works, { autoAlpha: 1, xPercent: 0, stagger: .35 }, ">.2" );
+        tl.to( works_img, { duration: 1, autoAlpha: 1 },label+"+=1"  )
     }
     //#endregion
     return(

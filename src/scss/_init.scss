@@ -1,12 +1,13 @@
 /* reset */
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 //font-family: 'Courier Prime', monospace;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+// font-family: 'Open Sans', sans-serif;
 
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Courier Prime', monospace;
   font-style: unset;
 }
 
@@ -49,4 +50,13 @@ svg{
 
 //set default font size for mobile
 @include setFontSize(h1-s, h2-s, n-span-s, f-span-s);
+
+.nav,
+.header,
+.about__info__container,
+.works__list__container,
+.footer__container{
+  font-family: $OpenSans;
+  letter-spacing: 4px;
+}
 

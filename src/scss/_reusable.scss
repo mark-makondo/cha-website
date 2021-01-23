@@ -1,4 +1,6 @@
 
+$OpenSans: 'Open Sans', sans-serif;
+
 $max-width: (
   "m-width-s": 20.5rem,
   "m-width-m": 30rem,
@@ -25,19 +27,19 @@ $bg-colors: (
 
 $font-size: (
   // s-screen
-  "h1-s": 55px,
+  "h1-s": 50px,
   "h2-s": 30px,
   "n-span-s": 20px,
   "f-span-s": 15px,
   // m-screen
-  "h1-m": 70px,
-  "h2-m": 45px,
-  "n-span-m": 30px,
+  "h1-m": 60px,
+  "h2-m": 40px,
+  "n-span-m": 25px,
   "f-span-m": 20px,
   // l-screen
-  "h1-l": 75px,
-  "h2-l": 70px,
-  "n-span-l": 35px,
+  "h1-l": 70px,
+  "h2-l": 50px,
+  "n-span-l": 30px,
   "f-span-l": 25px,
   // xl-screen
   "h1-xl": 105px,
@@ -101,10 +103,10 @@ $font-size: (
     @content;
   }
 };
-@mixin media-xl{
-  @media screen and (min-width: 1600px){
+// @mixin media-xl{
+//   @media screen and (min-width: 1600px){
 
-    @include setFontSize(h1-xl, h2-xl, n-span-xl, f-span-xl);
-    @content;
-  }
-};
+//     @include setFontSize(h1-xl, h2-xl, n-span-xl, f-span-xl);
+//     @content;
+//   }
+// };
