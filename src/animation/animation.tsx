@@ -53,14 +53,16 @@ const animations = () => {
 
      // responsive animation 
     const responsiveAnimation = () => {
-
+        
         // Scroll Trigger
         ScrollTrigger.matchMedia({
             // desktop
             "(min-width: 769px)": function() {
                 animate_navHandler();
                 scrollTriggerArray("#Home", "top+=100 top", "top+=100 bottom-=200", false, "nav-compressed", false, 0, "nav-compress");
-                return function() {};
+                return function() {
+                    ScrollTrigger.refresh(true)
+                };
             },
             // mobile
             "(max-width: 768px)": function() {
@@ -72,6 +74,7 @@ const animations = () => {
                     clicked = false;
                     expanded = true;
                     compressed = false;
+                    ScrollTrigger.refresh(true)
                 };
             },
 
@@ -83,7 +86,7 @@ const animations = () => {
                 scrollTriggerArray("#About", "top top", "bottom top", false, "about-pinned", true, 1, "about-pin-animate");
                 scrollTriggerArray("#Works", "top top+=50", "bottom bottom-=500", false, "works-animated", false, 0, "works-animate");
                 // nav links
-                scrollTriggerArray("section", "top top+=50", "bottom top+=50", false, "nav-active", false, 0, "navLink-animate");
+                scrollTriggerArray("section", "top+=50 top+=55", "bottom+=46 top+=50", false, "nav-active", false, 0, "navLink-animate");
             }
         })
 
@@ -125,14 +128,14 @@ const animations = () => {
         }
     }
     const nav_compressed = (tl:gsap.core.Timeline, duration: number, label: string) => {
-        tl.to(nav, { duration: duration, width: "15vw" , ease:"power4.in" }, label)
+        tl.to(nav, { duration: duration, width: "15vw", autoAlpha: .5, ease:"power4.inOut" }, label)
         tl.to(nav_arrow_svg, { duration: duration, rotate: "180deg", x:-10, fill:"transparent",strokeDasharray: "110px", ease: "none" }, label)
         tl.to(nav_list, { x:-50, autoAlpha: 0, stagger: -.1 }, label)
     }
     const nav_expanded = (tl:gsap.core.Timeline, duration: number, label: string) => {
-        tl.to(nav, { duration: duration, width: "70vw", ease:"power4.in" }, label)
-        tl.to(nav_arrow_svg, { duration: duration, rotate: "0", x:0, fill:"#b64a47",strokeDasharray: "0px", ease: "none" }, label)
-        tl.to(nav_list, { x:0, autoAlpha: 1, stagger: -.1 }, label)
+        tl.to(nav, { duration: duration, width: "70vw", ease:"power4.inOut", autoAlpha: 1}, label)
+        tl.to(nav_arrow_svg, { duration: duration, rotate: "0", x:-5, fill:"#b64a47",strokeDasharray: "0px", ease: "none" }, label)
+        tl.to(nav_list, { x:0, autoAlpha: 1, stagger: .1 }, label+"+=.5")
     }
     //#endregion
     
@@ -199,9 +202,7 @@ const animations = () => {
                 animate_works(tl);
                 ScrollTrigger.create(scrollTriggerObj);
             }else if(type === "navLink-animate"){
-
-                tl.to(navList[i], { color: "#FBEBEB"} );
-                
+                navLinkScroll(tl, navList[i])
                 ScrollTrigger.create(scrollTriggerObj);
             }else{ console.log("invalid type") }
         })
@@ -269,8 +270,8 @@ const animations = () => {
             })
         })
     }
-    const navLinkScroll = (tl:any) =>{
-
+    const navLinkScroll = (tl:gsap.core.Timeline, target:any) =>{
+        tl.to(target, { color: "#FBEBEB"} );
     }
     //#endregion
 
@@ -286,7 +287,7 @@ const animations = () => {
     const animate_pinnedAbout = (target:string, start:string, end:string, scrub:number|boolean, pin:boolean, marker: boolean) => {
 
         let el_about = [about_title, about_name, about_say1, about_say2];
-        let label = "appear", label_switch = ">.5";
+        let label = "appear", label_switch = ">";
         let clr_active = "#EC625F", clr_notActive = "#FBEBEB";
 
         gsap.set( about_img, { scale: 0 } );

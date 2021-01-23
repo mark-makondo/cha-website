@@ -3,7 +3,7 @@ import React from 'react';
 // svg components
 import {ReactComponent as Logo} from '../img/svg/cha-logo.svg';
 
-interface Props{
+export interface Props{
 
 }
 

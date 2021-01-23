@@ -3,7 +3,7 @@ import React from 'react';
 // jpg components
 import Profile from '../img/jpg/about-pic.jpg';
 
-interface Props{
+export interface Props{
 
 }
 

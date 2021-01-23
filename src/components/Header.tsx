@@ -4,7 +4,7 @@ import React from 'react'
 // svg components
 import {ReactComponent as HeroLogo} from '../img/svg/hero-logo/hero-logo-colored.svg';
 
-interface Props {
+export interface Props {
 
 }
 
