@@ -22,8 +22,8 @@ const Footer: React.FC<Props> = ({}) => {
                             <span className="f-span"><a href="https://www.facebook.com/chaartistbeauty">|Facebook</a></span>
                         </li>
                         <li> 
-                            <span><a href="https://www.facebook.com/chaartistbeauty"><i className="fab fa-instagram"></i></a></span>
-                            <span className="f-span"><a href="https://www.facebook.com/chaartistbeauty">|Instagram</a></span>
+                            <span><a href="https://www.instagram.com/makondochanda/"><i className="fab fa-instagram"></i></a></span>
+                            <span className="f-span"><a href="https://www.instagram.com/makondochanda/">|Instagram</a></span>
                         </li>
                     </ul>
                 </div>
