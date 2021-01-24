@@ -49,7 +49,7 @@ const animations = () => {
 
     //#endregion
 
-     // responsive animation 
+    // responsive animation 
     const responsiveAnimation = () => {
 
         ScrollTrigger.matchMedia({
@@ -269,14 +269,11 @@ const animations = () => {
         }
     }
     const navbarSmoothScroll = (target:any) => {
-        window.scroll()
         target.forEach((item:any, i:number) => {
             item.addEventListener("click", (e:any) => {
                 e.preventDefault();
 
                 let href = item.getAttribute("href");
-                let query = document.querySelector(href);
-                // let topY = query.offsetTop;
 
                 gsap.to(window, {duration: 1, scrollTo:href, overwrite: "auto", ease:"Power3.easeOut"});
             })
@@ -295,6 +292,7 @@ const animations = () => {
         tl.from(header_info, {duration: .5, autoAlpha: 0}, "appear");
     }
     //#endregion
+    
     //#region About Animation
     const animate_about = (target:string, start:string, end:string, scrub:number|boolean, pin:boolean, marker: boolean) => {
         
@@ -338,6 +336,7 @@ const animations = () => {
     }
 
     //#endregion
+    
     //#region works Animation
     const animate_works = (tl:any) => { 
 
@@ -354,6 +353,7 @@ const animations = () => {
         tl.to( works_img, { duration: 1, autoAlpha: 1 },label+"+=1"  )
     }
     //#endregion
+    
     return(
         responsiveAnimation()
     );

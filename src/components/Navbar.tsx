@@ -3,8 +3,7 @@ import React from 'react';
 // svg components
 import {ReactComponent as Arrow} from '../img/svg/left-arrow.svg';
 
-interface Props{
-}
+interface Props{}
 
 const navList = (listName: string, i:number) =>{
     return(
@@ -17,7 +16,7 @@ const navList = (listName: string, i:number) =>{
 <li>
 
 </li>
-const Navbar: React.FC<Props> = ({}) => {
+const Navbar: React.FC<Props> = () => {
     let lists = ["Home", "About", "Works", "Contact"];
 
     return(

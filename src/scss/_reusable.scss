@@ -103,10 +103,3 @@ $font-size: (
     @content;
   }
 };
-// @mixin media-xl{
-//   @media screen and (min-width: 1600px){
-
-//     @include setFontSize(h1-xl, h2-xl, n-span-xl, f-span-xl);
-//     @content;
-//   }
-// };

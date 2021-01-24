@@ -1,8 +1,5 @@
 // responsive medium screen //769px
 @include media-md{
-    // .nav{
-        // width: 14.375rem;
-    // }
     .header{
         #{&}__container{
             max-width: getMaxWidth(m-width-m);
@@ -43,7 +40,6 @@
 // responsive large screen //1200px
 @include media-lg{
     .nav{
-        // width: 46.25rem;
         #{&}__container{
             ul{
                 @include setDisplayFlex(row,center,center);
@@ -213,50 +209,3 @@
         }
     }
 }
-
-// // responsive x-large screen //1600px
-// @include media-xl{
-//     .nav{
-//         // width: 58.4375rem;
-//         #{&}__arrow{
-//             min-width: 3rem;
-//         }
-//     }
-//     .header{
-//         #{&}__container{
-//             max-width: getMaxWidth(m-width-xl);
-//         }
-//         #{&}__logo{
-//             width: 43%;
-//             margin: auto;
-//         }
-//     }
-//     .about{
-//         #{&}__container{
-//             max-width: getMaxWidth(m-width-xl);
-//         }
-//         #{&}__image-box{
-//             max-width: 35rem;
-//         }
-//     }
-//     .works{
-//         #{&}__container{
-//             max-width: getMaxWidth(m-width-xl);
-//         }
-//         #{&}__img-box{
-//             max-width: 35rem;
-//         }
-//     }
-//     .footer{
-//         #{&}__container{
-//             max-width: getMaxWidth(m-width-xl);
-//         }
-//         #{&}__contacts{
-//             .inside{
-//                 svg{
-//                     max-width: 30rem;
-//                 }
-//             }
-//         }
-//     }
-// }

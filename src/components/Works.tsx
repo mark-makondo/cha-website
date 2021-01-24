@@ -9,7 +9,7 @@ import Hair from '../img/jpg/hair.jpg';
 import Eyebrows from '../img/jpg/eyebrows.jpg';
 import BeautyCare from '../img/jpg/beauty-care.jpg';
 import NailCare from '../img/jpg/nail-care.jpg';
-import Waxing from '../img/jpg/nail-care.jpg';
+import Waxing from '../img/jpg/body-waxing.jpg';
 
 interface Props{
     spanId: string,
@@ -19,7 +19,6 @@ interface Props{
 const Works: React.FC<Props> = ({spanId, setSpanId}) =>{
 
     const imageHandler = () => {
-        let works_list = document.querySelectorAll(".works__list__container ul li");
         let works_lists = document.querySelectorAll(".works__list__container ul li span");
         let img_box = document.querySelector("#img-box") as HTMLImageElement;
 
@@ -64,6 +63,8 @@ const Works: React.FC<Props> = ({spanId, setSpanId}) =>{
 
     useEffect(()=>{
         imageHandler()
+
+        // eslint-disable-next-line
     },[spanId])
     
 
@@ -73,7 +74,7 @@ const Works: React.FC<Props> = ({spanId, setSpanId}) =>{
         <section className="works" id="Works">
             <div className="works__container">
                 <div className="works__list">
-                    <div className="works__list__container"  style = {svgBackground} >
+                    <div className="works__list__container" style = {svgBackground} >
                         <h1 className="works__list__title">Featuring</h1>
                         <h2>#Be it</h2>
                         <ul>

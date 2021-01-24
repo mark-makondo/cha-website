@@ -3,11 +3,9 @@ import React from 'react';
 // svg components
 import {ReactComponent as Logo} from '../img/svg/cha-logo.svg';
 
-export interface Props{
+interface Props{}
 
-}
-
-const Footer: React.FC<Props> = ({}) => {
+const Footer: React.FC<Props> = () => {
     return(
 
         <section className="footer" id="Contact">
