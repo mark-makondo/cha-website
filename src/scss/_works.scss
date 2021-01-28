@@ -1,6 +1,7 @@
 .works{
     position: relative;
     height: 100vh;
+    max-width: 100%;
     background-color: getBgColor(secondary);
     padding: 1rem;
     #{&}__container{
